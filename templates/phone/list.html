@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Phone List</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}
+    Phone List
+{% endblock %}
+
+{% block content %}
+
     <h1>Phone List</h1>
     <ul>
         {% for phone in phones %}
             <li>{{ phone.phone_name }} - {{ phone.price }} - {{ phone.color }}</li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}

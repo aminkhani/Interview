@@ -1,16 +1,15 @@
-<!-- templates/myapp/add_book.html -->
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Add Book</title>
-</head>
-<body>
+{% block title %}
+    Add Book
+{% endblock %}
+
+{% block content %}
+
     <h1>Add a new book</h1>
     <form method="post">
-        {% csrf_token %}
         {{ form.as_p }}
+        {% csrf_token %}
         <button type="submit">Save</button>
     </form>
-</body>
-</html>
+{% endblock %}

@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Phone Registrations</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}
+    Phone Registrations
+{% endblock %}
+
+{% block content %}
     <h1>Phone Registration</h1>
-</body>
-</html>
+    <h3>End Points</h3>
+    <h3>
+        <ul>
+            <li><a href="{% url 'phone:index' %}">Home</a></li>
+            <li><a href="http://localhost:8000/admin/">Admin Panel</a></li>
+            <li><a href="{% url 'phone:phone-list' %}">Phones List</a></li>
+            <li><a href="{% url 'phone:add-phone' %}">Add Phone</a></li>
+            <li><a href="{% url 'phone:get-report' %}">Get Report</a></li>
+        </ul>
+    </h3>
+{% endblock %}

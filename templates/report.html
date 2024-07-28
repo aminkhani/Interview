@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Report of the phone registration</title>
-</head>
-<body>
+{% extends 'base.html' %}
+    {% block title %}
+        Report of the phone registration
+    {% endblock %}
+{% block content %}
     <h2>All phone brands that their brand is Korea</h2>
     {% if korean_brand %}
     	{% for item in korean_brand %}
@@ -49,7 +47,4 @@
     {% endif %}
 
     <hr>
-
-
-</body>
-</html>
+{% endblock %}
