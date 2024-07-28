@@ -16,7 +16,7 @@
 - Database: **`<database>`**
 - Port: **`5431`**
 
-## End points
+## End-points
 
 - Home: [**`localhost:8000/`**](http://localhost:8000/)
 - Admin Panel: [**`localhost:8000/admin`**](http://localhost:8000/admin)
@@ -24,12 +24,22 @@
 - Add Phone: [**`localhost:8000/add-phone/`**](http://localhost:8000/add-phone/)
 - Add Phone: [**`localhost:8000/get-report/`**](http://localhost:8000/get-report/)
 
+## Improvements
+
+- Working on front-end for better viewing
+- Writing script to add dummy data
+- Working on admin panel ui
+- Working on get report end-point
+
 ## Challenges
-- Design Database (ERD)
+
+-Design Database (ERD)
   - See ERD folder 
 
 ### Time to complete
+
 - It approximately takes 6 hours.
 
 ### Difficulty
+
 - Simple
