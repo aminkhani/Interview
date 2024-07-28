@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report of the phone registration</title>
+</head>
+<body>
+    <h2>All phone brands that their brand is Korea</h2>
+    {% if korean_brand %}
+    	{% for item in korean_brand %}
+            {{ item.phone_name }} - {{ item.phone_price }}
+    	{% endfor %}
+    {% else %}
+        <p>nothing</p>
+    {% endif %}
+
+    <hr>
+
+    <h2>Search for Phones by Brand</h2>
+    <form method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit">Search</button>
+    </form>
+    {% if phones %}
+        <ul>
+        {% if phones %}
+            {% for item in phones %}
+                <li>
+                    {{ item.phone_name }} - ${{ item.price }} - {{ item.color }} - {{ item.screen_size }} - {{ item.is_available }} - {{ item.manufacturing_country }}
+                </li>
+            {% endfor %}
+        {% else %}
+            <li>No phones found for brand "{{ brand }}"</li>
+        {% endif %}
+    </ul>
+    <a href="{% url 'phone:get-report' %}">Search again</a>
+    {% endif %}
+
+    <hr>
+
+    <h2>Phones that their manufacturing country is equal to their nationality</h2>
+    {% if manufacturing_country_nationality %}
+        {% for item in manufacturing_country_nationality %}
+            <li>
+                {{ item.phone_name }} - ${{ item.price }} - {{ item.color }} - {{ item.screen_size }} - {{ item.is_available }} - {{ item.manufacturing_country }}
+            </li>
+        {% endfor %}
+    {% endif %}
+
+    <hr>
+
+
+</body>
+</html>

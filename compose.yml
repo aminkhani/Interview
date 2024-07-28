@@ -1,0 +1,26 @@
+services:
+  db:
+    image: postgres:16-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .env
+    restart: on-failure
+    ports:
+      - "5431:5432"
+
+  web:
+    build: .
+    command: gunicorn phone_registration.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    restart: on-failure
+    env_file:
+      - .env
+
+volumes:
+  postgres_data:
