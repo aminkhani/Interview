@@ -5,15 +5,13 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Phone Registration</h1>
-    <h3>End Points</h3>
-    <h3>
-        <ul>
-            <li><a href="{% url 'phone:index' %}">Home</a></li>
-            <li><a href="http://localhost:8000/admin/">Admin Panel</a></li>
-            <li><a href="{% url 'phone:phone-list' %}">Phones List</a></li>
-            <li><a href="{% url 'phone:add-phone' %}">Add Phone</a></li>
-            <li><a href="{% url 'phone:get-report' %}">Get Report</a></li>
-        </ul>
-    </h3>
+    <h1 class="mt-2 text-4xl font-bold mb-8">Phone Registration</h1>
+    <h2 class="text-2xl font-bold mb-4">End Points</h2>
+    <ul>
+        <li><a href="{% url 'phone:index' %}">Home</a></li>
+        <li><a href="http://localhost:8000/admin/">Admin Panel</a></li>
+        <li><a href="{% url 'phone:phone-list' %}">Phones List</a></li>
+        <li><a href="{% url 'phone:add-phone' %}">Add Phone</a></li>
+        <li><a href="{% url 'phone:get-report' %}">Get Report</a></li>
+    </ul>
 {% endblock %}

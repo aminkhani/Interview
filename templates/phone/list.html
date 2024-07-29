@@ -6,7 +6,7 @@
 
 {% block content %}
 
-    <h1>Phone List</h1>
+    <h1 class="text-4xl font-bold mb-8">Phone List</h1>
     <ul>
         {% for phone in phones %}
             <li>{{ phone.phone_name }} - {{ phone.price }} - {{ phone.color }}</li>

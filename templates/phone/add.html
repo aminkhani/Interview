@@ -1,15 +1,20 @@
 {% extends 'base.html' %}
 
+{% load tailwind_filters %}
+
 {% block title %}
     Add Book
 {% endblock %}
 
 {% block content %}
-
-    <h1>Add a new book</h1>
-    <form method="post">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <button type="submit">Save</button>
-    </form>
+    <div class="w-full max-w-2xl mx-auto sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold mb-8">Add a new phone</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+        <button type="submit" class="mt-2 text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+            Save
+        </button>
+        </form>
+    </div>
 {% endblock %}
