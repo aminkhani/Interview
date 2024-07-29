@@ -33,7 +33,7 @@
 
 ## Challenges
 
--Design Database (ERD)
+- Design Database (ERD)
   - See ERD folder 
 
 ### Time to complete

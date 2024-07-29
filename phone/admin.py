@@ -22,20 +22,20 @@ class GroupAdmin(BaseGroupAdmin, ModelAdmin):
 
 
 @admin.register(PhoneBrand)
-class PhoneBrandAdmin(admin.ModelAdmin):
+class PhoneBrandAdmin(ModelAdmin):
     list_display = ('name', 'nationality')
     list_filter = ('name', 'nationality')
     search_fields = ('name', 'nationality')
 
 
 @admin.register(PhoneModel)
-class PhoneModelAdmin(admin.ModelAdmin):
+class PhoneModelAdmin(ModelAdmin):
     list_display = ('model', 'brand')
     list_filter = ('brand',)
 
 
 @admin.register(Phone)
-class PhoneAdmin(admin.ModelAdmin):
+class PhoneAdmin(ModelAdmin):
     list_display = (
         'phone_name', 'color', 'screen_size', 'price',
         'is_available', 'manufacturing_country'
